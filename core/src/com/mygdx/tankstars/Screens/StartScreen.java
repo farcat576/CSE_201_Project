@@ -28,7 +28,7 @@ public class StartScreen implements Screen {
         this.game=game;
         this.img=new Texture(Gdx.files.internal("Start_Menu.png"));
         this.cam = new OrthographicCamera();
-        this.gameport = new FitViewport(TankStars.V_WIDTH ,TankStars.V_HEIGHT,cam);
+        this.gameport = new FitViewport(TankStars.V_WIDTH ,TankStars.V_HEIGHT,this.cam);
     }
     @Override
     public void show() {
@@ -39,20 +39,23 @@ public class StartScreen implements Screen {
 
     @Override
     public void render(float delta) {
-//        if(Gdx.input.justTouched()) {
-//            game.setScreen(new PlayScreen((TankStars) game));
-//            this.dispose();
-//        }
+        if(Gdx.input.justTouched()) {
+            game.setScreen(new PlayScreen((TankStars) game));
+            this.dispose();
+        }
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+
         game.batch.begin();
 
 
-        this.Circle.begin(ShapeRenderer.ShapeType.Filled);
-        this.Circle.circle(50,50,20);
-        this.Circle.end();
-//
+//        this.Circle.begin(ShapeRenderer.ShapeType.Filled);
+//        this.Circle.circle(50,50,20);
+//        this.Circle.end();
         game.batch.draw(this.img,0,0,this.cam.viewportWidth,this.cam.viewportHeight);
+
+
         game.batch.end();
     }
 

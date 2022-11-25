@@ -31,8 +31,8 @@ public class HUD {
         table.top();
         table.setFillParent(true);
 
-        healthALabel =new Label(String.format("%06d", healthA), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        healthBLabel =new Label(String.format("%06d", healthB), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        healthALabel = new Label(String.format("%06d", healthA), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        healthBLabel = new Label(String.format("%06d", healthB), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
 
         table.add(healthALabel).expandX().padTop(10);
         table.add(healthBLabel).expandX().padTop(10);
