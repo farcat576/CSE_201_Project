@@ -1,9 +1,9 @@
 package com.mygdx.tankstars;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import com.mygdx.tankstars.TankStars;
+import com.badlogic.gdx.physics.box2d.Box2D;
+import com.mygdx.tankstars.TankStarsCS;
 
 // Please note that on macOS your application needs to be started with the -XstartOnFirstThread JVM argument
 public class DesktopLauncher {
