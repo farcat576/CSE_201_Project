@@ -11,3 +11,9 @@ import com.badlogic.gdx.math.Vector2;
     //    this.position= new Vector2(Gdx.graphics.getWidth()/2,this.img.getScaleY()*this.img.getHeight()/2);
     //}
 //}
+
+//Abrams
+//Frost
+//Buratino
+//Helios
+//Blazer

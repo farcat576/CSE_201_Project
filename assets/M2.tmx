@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="120" height="72" tilewidth="10" tileheight="10" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" source="TileSet1.tsx"/>
+ <imagelayer id="2" name="Image Layer 1">
+  <image source="907157 (1).jpg" width="1200" height="720"/>
+ </imagelayer>
+ <layer id="1" name="Tile Layer 1" width="120" height="72">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAMAiD9/2m/aDpAQgIAAAAAAAAAAAAAAAAAAAAAAAAAAABcq6qqqqqqqqqqqqqqPjhXDQu5
+  </data>
+ </layer>
+</map>
