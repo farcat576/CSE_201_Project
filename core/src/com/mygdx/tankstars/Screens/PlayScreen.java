@@ -7,13 +7,9 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.maps.tiled.TiledMapTile;
-import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
-import com.badlogic.gdx.maps.tiled.tiles.StaticTiledMapTile;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.utils.viewport.FitViewport;
@@ -57,19 +53,13 @@ public class PlayScreen implements Screen{
         this.cam.position.set( this.gameport.getWorldWidth()/2, this.gameport.getWorldHeight()/2 , 0 );
 
         box2dWorld = new World(new Vector2(0,-10),true);
-        debugRenderer = new Box2DDebugRenderer();
+//        debugRenderer = new Box2DDebugRenderer();
 
         this.level = new Level(box2dWorld,this.tiledMap);
 
         box2dWorld.setContactListener(new CollisionListener());
 
-        this.tank1Type = TANK_TYPE.ABRAMS;
-        this.tank2Type = TANK_TYPE.FROST;
-        this.setTank1();
-        this.setTank2();
 
-        this.currentTank = tank1;
-        currentTank.setFuel(100);
 
         //this.texture1 = new Texture(Gdx.files.internal("Abrams_transparent.png"));
         //this.sprite1 = new Sprite(texture1,0,0, 555,305);
@@ -97,11 +87,44 @@ public class PlayScreen implements Screen{
 
     }
 
-    private void setTank1(){
+    private void setTank1sprit(){
         Sprite tankSprite;
         tankSprite = tankSetup(tank1Type);
         this.tank1= new Tank(this.box2dWorld,100,tankSprite,14,250);
     }
+
+    public void setTank1(int i){
+        TANK_TYPE k ;
+        switch (i){
+            case 0:
+                k = TANK_TYPE.ABRAMS;
+                break;
+            case 1:
+                k = TANK_TYPE.FROST;
+                break;
+            default:
+                k=TANK_TYPE.ABRAMS;
+        }
+        this.tank1Type = k;
+        this.setTank1sprit();
+        this.currentTank = tank1;
+        currentTank.setFuel(100);
+    } public void setTank2(int i){
+        TANK_TYPE k ;
+        switch (i){
+            case 0:
+                k = TANK_TYPE.ABRAMS;
+                break;
+            case 1:
+                k = TANK_TYPE.FROST;
+                break;
+            default:
+                k=TANK_TYPE.FROST;
+        }
+        this.tank2Type = k;
+        this.setTank2sprit();
+    }
+
 
     private Sprite tankSetup(TANK_TYPE s){
         Texture tankTexture;
@@ -141,7 +164,7 @@ public class PlayScreen implements Screen{
         return tankSprite;
     }
 
-    private void setTank2(){
+    private void setTank2sprit(){
         Texture tankTexture;
         Sprite tankSprite = tankSetup(tank2Type);
         tankSprite.flip(true,false);
@@ -224,7 +247,7 @@ public class PlayScreen implements Screen{
 
 
         orthogonalTiledMapRenderer.render();
-        debugRenderer.render(box2dWorld,cam.combined);
+//        debugRenderer.render(box2dWorld,cam.combined);
 
         game.batch.setProjectionMatrix(this.hud.stage.getCamera().combined);
         this.hud.stage.draw();

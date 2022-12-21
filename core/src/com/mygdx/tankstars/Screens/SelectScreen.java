@@ -17,7 +17,7 @@ public class SelectScreen implements Screen {
     private OrthographicCamera cam;
     private FitViewport gameport;
     private final float radius=50;
-    private static int descriptions[]={3,4};
+    private static int descriptions[]={0,1,2,3,4};
     private static PlayScreen screen;
     private static int chosing=0;
 
