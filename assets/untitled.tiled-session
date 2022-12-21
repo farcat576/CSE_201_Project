@@ -1,0 +1,43 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "M3.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "M3.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 447,
+                "y": 695.75
+            }
+        },
+        "Tileset2.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 8,
+            "scaleInEditor": 11
+        }
+    },
+    "last.imagePath": "/home/ulysses/IdeaProjects/CSE_201_Project/assets",
+    "map.height": 180,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 5,
+    "map.tileWidth": 5,
+    "map.width": 320,
+    "openFiles": [
+        "M3.tmx",
+        "Tileset2.tsx"
+    ],
+    "project": "untitled.tiled-project",
+    "recentFiles": [
+        "Tileset2.tsx",
+        "M3.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}

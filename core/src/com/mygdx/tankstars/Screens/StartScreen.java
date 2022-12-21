@@ -33,7 +33,6 @@ public class StartScreen implements Screen {
     @Override
     public void show() {
 
-        this.Circle = new ShapeRenderer();
     }
 
 
@@ -49,7 +48,6 @@ public class StartScreen implements Screen {
 
         game.batch.begin();
 
-
 //        this.Circle.begin(ShapeRenderer.ShapeType.Filled);
 //        this.Circle.circle(50,50,20);
 //        this.Circle.end();
@@ -59,7 +57,6 @@ public class StartScreen implements Screen {
         game.batch.end();
     }
 
-    private ShapeRenderer Circle;
 
 
     @Override
@@ -84,7 +81,6 @@ public class StartScreen implements Screen {
 
     @Override
     public void dispose() {
-        this.Circle.dispose();
         this.img.dispose();
     }
 }
